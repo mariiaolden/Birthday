@@ -12,7 +12,7 @@
     echo 'Connect failed: '. mysqli_connect_error();
   }
 
-  function query($query)
+function query($conn, $query)
   {
     if ($conn->query($query) === TRUE) {
       echo "succesfully added new data<br>";
@@ -22,18 +22,18 @@
   }
 
   if ($_POST["name"] != "" && $_POST["email"] != "") {
-    query("INSERT INTO guest (Name, E-mail) VALUES (. $_POST[name]. ,. $_POST[email]. )");
+    query($conn, "INSERT INTO `guest` (`Name`, `E-mail`) VALUES ('". $_POST['name']. "','". $_POST['email']."' )");
 
     if ($_POST["song1"] != "") {
-      query("INSERT INTO `songs` (`Name`) VALUES ('". $_POST['song1']. "')");
+      query($conn, "INSERT INTO `songs` (`Name`) VALUES ('". $_POST['song1']. "')");
     }
 
     if ($_POST["song2"] != "") {
-      query("INSERT INTO `songs` (`Name`) VALUES ('". $_POST['song2']. "')");
+      query($conn, "INSERT INTO `songs` (`Name`) VALUES ('". $_POST['song2']. "')");
     }
 
     if ($_POST["song3"] != "") {
-      query("INSERT INTO `songs` (`Name`) VALUES ('". $_POST['song3']. "')");
+      query($conn, "INSERT INTO `songs` (`Name`) VALUES ('". $_POST['song3']. "')");
     }
   }
 

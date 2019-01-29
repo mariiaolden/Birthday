@@ -44,20 +44,21 @@ function query($conn, $query)
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="birthday.css">
     <title></title>
   </head>
   <body>
     <form action="birthday.php" method="post">
-      Name: <input type="text" name="name"><br>
-      E-mail: <input type="text" name="email"><br>
-      Song1: <input type="text" name="song1"><br>
-      Song2: <input type="text" name="song2"><br>
-      Song3: <input type="text" name="song3"><br>
+      Name : <input type="text" name="name"><br></br>
+      E-mail: <input type="text" name="email"><br></br>
+      Song1: <input type="text" name="song1"><br></br>
+      Song2: <input type="text" name="song2"><br></br>
+      Song3: <input type="text" name="song3"><br></br>
       <input type="submit">
     </form>
 
-    Welcome <?php echo $_GET["name"]; ?><br>
-    Your E-Mail <?php echo $_GET["email"]; ?><br>
+    Welcome : <?php echo $_GET["name"]; ?><br>
+    Your E-Mail : <?php echo $_GET["email"]; ?><br>
     </form>
   </body>
 </html>

@@ -1,0 +1,10 @@
+html {
+  background-image: url('stars.jpg');
+  background-color: #cccccc;
+  background-size: cover;
+}
+input {
+    background-color: #913807;
+  background-size: cover;
+  opacity: 0.2;
+}

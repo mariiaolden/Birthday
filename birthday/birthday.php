@@ -48,16 +48,15 @@ function query($conn, $query)
     <title></title>
   </head>
   <body>
-    <form action="birthday.php" method="post">
+    <form method="post">
       Name : <input type="text" name="name"><br></br>
-      E-mail: <input type="text" name="email"><br></br>
+      E-mail:<input type="text" name="email"><br></br>
       Song1: <input type="text" name="song1"><br></br>
       Song2: <input type="text" name="song2"><br></br>
       Song3: <input type="text" name="song3"><br></br>
-      <input type="submit">
-    </form>
+             <input type="submit"><br></br>
 
-    Welcome : <?php echo $_GET["name"]; ?><br>
+    Welcome : <?php echo $_POST["name"]; ?><br>
     Your E-Mail : <?php echo $_GET["email"]; ?><br>
     </form>
   </body>
